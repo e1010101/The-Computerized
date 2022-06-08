@@ -22,7 +22,7 @@ import org.apache.logging.log4j.Logger;
 import theComputerized.cards.AbstractCustomCard;
 import theComputerized.cards.cardvars.SecondDamage;
 import theComputerized.cards.cardvars.SecondMagicNumber;
-import theComputerized.relics.AbstractEasyRelic;
+import theComputerized.relics.AbstractCustomRelic;
 
 import java.nio.charset.StandardCharsets;
 
@@ -66,6 +66,8 @@ public class Main implements
         @SpireEnum(name = "MILITARY")
         public static AbstractCard.CardTags MILITARY;
 
+        @SpireEnum(name = "SPARE_PART")
+        public static AbstractCard.CardTags SPARE_PART;
     }
 
     public Main() {
@@ -112,8 +114,8 @@ public class Main implements
     @Override
     public void receiveEditRelics() {
         new AutoAdd(modID)
-                .packageFilter(AbstractEasyRelic.class)
-                .any(AbstractEasyRelic.class, (info, relic) -> {
+                .packageFilter(AbstractCustomRelic.class)
+                .any(AbstractCustomRelic.class, (info, relic) -> {
                     if (relic.color == null) {
                         BaseMod.addRelic(relic, RelicType.SHARED);
                     } else {

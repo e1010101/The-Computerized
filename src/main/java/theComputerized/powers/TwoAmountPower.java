@@ -1,5 +1,6 @@
 package theComputerized.powers;
 
+import basemod.interfaces.CloneablePowerInterface;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +13,7 @@ import theComputerized.Main;
 import static theComputerized.util.Wiz.*;
 
 public class TwoAmountPower extends AbstractCustomPower
-    implements OnReceivePowerPower {
+    implements OnReceivePowerPower, CloneablePowerInterface {
     // intellij stuff Example, buff, false
     private static final String SIMPLE_NAME = "ExampleTwoAmount";
     public static final String POWER_ID = Main.makeID(SIMPLE_NAME);
@@ -47,5 +48,10 @@ public class TwoAmountPower extends AbstractCustomPower
     @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount2 + DESCRIPTIONS[2];
+    }
+
+    @Override
+    public AbstractPower makeCopy() {
+        return new TwoAmountPower(owner, amount, amount2);
     }
 }

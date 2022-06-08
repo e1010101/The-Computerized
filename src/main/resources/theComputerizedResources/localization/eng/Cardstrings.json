@@ -64,5 +64,9 @@
   "${ModID}:Recalibrate": {
     "NAME": "Recalibrate",
     "DESCRIPTION": "[#100573]Tactical[]. NL Draw !M! cards."
+  },
+  "${ModID}:PocketMissiles": {
+    "NAME": "Pocket Missiles",
+    "DESCRIPTION": "[#176e10]Spare Part[]. NL At the start of your turn, deal !M! damage to a random enemy."
   }
 }

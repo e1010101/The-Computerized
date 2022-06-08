@@ -6,5 +6,15 @@
       " #yStrength and #b",
       " #yDexterity."
     ]
+  },
+  "${ModID}:PocketMissiles": {
+    "NAME": "Pocket Missiles",
+    "DESCRIPTIONS": [
+      "At the start of your turn, deal #b",
+      " damage to a",
+      " damage to ",
+      " random enemy.",
+      " random enemies."
+    ]
   }
 }

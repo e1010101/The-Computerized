@@ -1,5 +1,6 @@
 package theComputerized.powers;
 
+import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -7,7 +8,8 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class LosePowerPower extends AbstractCustomPower {
+public class LosePowerPower extends AbstractCustomPower implements
+                                                        CloneablePowerInterface {
     private AbstractPower powerToLose;
     //private static Texture chain = TexLoader.getTexture("todomodResources/images/ui/chain.png");
 
@@ -39,5 +41,10 @@ public class LosePowerPower extends AbstractCustomPower {
         } else {
             description = "At the end of your turn, lose #b" + amount + " " + powerToLose.name + ".";
         }
+    }
+
+    @Override
+    public AbstractPower makeCopy() {
+        return new LosePowerPower(owner, powerToLose, amount);
     }
 }

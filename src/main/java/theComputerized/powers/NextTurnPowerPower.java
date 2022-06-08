@@ -1,5 +1,6 @@
 package theComputerized.powers;
 
+import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -7,7 +8,8 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class NextTurnPowerPower extends AbstractCustomPower {
+public class NextTurnPowerPower extends AbstractCustomPower
+    implements CloneablePowerInterface {
     private AbstractPower powerToGain;
         /*
     private static Texture arrow48 = TexLoader.getTexture("todomodResources/images/ui/arrow48.png");
@@ -16,8 +18,10 @@ public class NextTurnPowerPower extends AbstractCustomPower {
     public static HashMap<String, TextureAtlas.AtlasRegion> bufferHashMap128 = new HashMap<>();
     */
 
-    public NextTurnPowerPower(AbstractCreature owner, AbstractPower powerToGrant) {
-        super("Next Turn " + powerToGrant.name, powerToGrant.type, false, owner, powerToGrant.amount);
+    public NextTurnPowerPower(AbstractCreature owner,
+                              AbstractPower powerToGrant) {
+        super("Next Turn " + powerToGrant.name, powerToGrant.type, false, owner,
+              powerToGrant.amount);
         this.img = powerToGrant.img;
         this.region48 = powerToGrant.region48;
         this.region128 = powerToGrant.region128;
@@ -65,7 +69,8 @@ public class NextTurnPowerPower extends AbstractCustomPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         flash();
-        addToBot(new ApplyPowerAction(owner, owner, powerToGain, powerToGain.amount));
+        addToBot(new ApplyPowerAction(owner, owner, powerToGain,
+                                      powerToGain.amount));
         addToBot(new RemoveSpecificPowerAction(owner, owner, this.ID));
     }
 
@@ -74,7 +79,13 @@ public class NextTurnPowerPower extends AbstractCustomPower {
         if (powerToGain == null) {
             description = "???";
         } else {
-            description = "Next turn, gain #b" + powerToGain.amount + " " + powerToGain.name + ".";
+            description = "Next turn, gain #b" + powerToGain.amount + " " +
+                          powerToGain.name + ".";
         }
+    }
+
+    @Override
+    public AbstractPower makeCopy() {
+        return new NextTurnPowerPower(owner, powerToGain);
     }
 }

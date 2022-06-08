@@ -4,7 +4,7 @@
     <groupId>UnimportantInfo</groupId>
 
     <artifactId>TheComputerized</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.0</version>
     <name>The Computerized</name>
     <description>Adds The Computerized as a playable character.</description>
     <!-- Change the above for mod information. -->

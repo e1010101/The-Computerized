@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theComputerized.cards.DeployPlating;
 import theComputerized.cards.LaserBlaster;
-import theComputerized.relics.TodoItem;
+import theComputerized.relics.AdaptiveAI;
 
 import java.util.ArrayList;
 
@@ -79,7 +79,7 @@ public class TheComputerized extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(TodoItem.ID);
+        retVal.add(AdaptiveAI.ID);
         return retVal;
     }
 

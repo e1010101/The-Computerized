@@ -1,9 +1,9 @@
 {
-  "${ModID}:TodoItem": {
-    "NAME": "Todo Item",
-    "FLAVOR": "TODO: make this a sweet relic.",
+  "${ModID}:AdaptiveAI": {
+    "NAME": "Adaptive AI",
+    "FLAVOR": "A billion hours of training, all in one microchip.",
     "DESCRIPTIONS": [
-      "Has no effect."
+      "Add the start of each turn, add a #ySpare #yPart to your hand."
     ]
   }
 }
