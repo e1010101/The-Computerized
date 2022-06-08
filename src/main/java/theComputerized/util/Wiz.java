@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import theComputerized.actions.TimedVFXAction;
+import theComputerized.cards.tokens.PocketMissiles;
 import theComputerized.powers.LosePowerPower;
 import theComputerized.powers.NextTurnPowerPower;
 
@@ -30,6 +31,12 @@ public class Wiz {
 
     public static AbstractPlayer adp() {
         return AbstractDungeon.player;
+    }
+
+    public static ArrayList<AbstractCard> getAllSpareParts() {
+        ArrayList<AbstractCard> ls = new ArrayList<>();
+        ls.add(new PocketMissiles());
+        return ls;
     }
 
     public static void forAllCardsInList(Consumer<AbstractCard> consumer, ArrayList<AbstractCard> cardsList) {
@@ -61,6 +68,12 @@ public class Wiz {
         ArrayList<AbstractMonster> monsters = new ArrayList<>(AbstractDungeon.getMonsters().monsters);
         monsters.removeIf(m -> m.isDead || m.isDying);
         return monsters;
+    }
+
+    public static ArrayList<AbstractCard> getCardsMatchingPredicateInHand(Predicate<AbstractCard> pred) {
+        ArrayList<AbstractCard> ls = adp().hand.group;
+        ls.removeIf(pred.negate());
+        return ls;
     }
 
     public static ArrayList<AbstractCard> getCardsMatchingPredicate(Predicate<AbstractCard> pred) {

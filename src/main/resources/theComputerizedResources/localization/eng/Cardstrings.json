@@ -55,7 +55,7 @@
   },
   "${ModID}:LaserBlaster": {
     "NAME": "Laser Blaster",
-    "DESCRIPTION": "[#005c0f]Military Might[]. NL Deal !D! damage."
+    "DESCRIPTION": "[#005c0f]Military[] [#005c0f]Might[]. NL Deal !D! damage."
   },
   "${ModID}:DeployPlating": {
     "NAME": "Deploy Plating",
@@ -65,8 +65,16 @@
     "NAME": "Recalibrate",
     "DESCRIPTION": "[#100573]Tactical[]. NL Draw !M! cards."
   },
+  "${ModID}:ElectricDischarge": {
+    "NAME": "Electric Discharge",
+    "DESCRIPTION": "[#c46f0e]Function[]. NL Deal !D! damage."
+  },
+  "${ModID}:Toolbox": {
+    "NAME": "Toolbox",
+    "DESCRIPTION": "Add !M! [#176e10]Spare[] [#176e10]Parts[] to your hand."
+  },
   "${ModID}:PocketMissiles": {
     "NAME": "Pocket Missiles",
-    "DESCRIPTION": "[#176e10]Spare Part[]. NL At the start of your turn, deal !M! damage to a random enemy."
+    "DESCRIPTION": "[#176e10]Spare[] [#176e10]Part[]. NL At the start of your turn, deal !M! damage to a random enemy."
   }
 }

@@ -27,7 +27,7 @@ public class PocketMissiles extends AbstractCustomCard {
     private static final int COST = 0;
     private static final int MAGIC = 1;
     private static final TooltipInfo toolTipInfo =
-        new TooltipInfo("[#176e10]Spare Part[]",
+        new TooltipInfo("[#176e10]Spare[] [#176e10]Part[]",
                         "At the end of your turn, exhaust this and gain 5 " +
                         "Gold.");
     private static final List<TooltipInfo> tooltips =

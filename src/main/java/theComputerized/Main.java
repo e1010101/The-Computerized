@@ -68,6 +68,9 @@ public class Main implements
 
         @SpireEnum(name = "SPARE_PART")
         public static AbstractCard.CardTags SPARE_PART;
+
+        @SpireEnum(name = "FUNCTION")
+        public static AbstractCard.CardTags FUNCTION;
     }
 
     public Main() {
