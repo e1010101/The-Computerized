@@ -24,37 +24,35 @@ import theComputerized.relics.TodoItem;
 
 import java.util.ArrayList;
 
-import static theComputerized.TheComputerized.Enums.TODO_COLOR;
 import static theComputerized.Main.*;
+import static theComputerized.TheComputerized.Enums.COMPUTERIZED_COLOR;
 
 public class TheComputerized extends CustomPlayer {
-    private static final String[] orbTextures = {
-            modID + "Resources/images/char/mainChar/orb/layer1.png",
-            modID + "Resources/images/char/mainChar/orb/layer2.png",
-            modID + "Resources/images/char/mainChar/orb/layer3.png",
-            modID + "Resources/images/char/mainChar/orb/layer4.png",
-            modID + "Resources/images/char/mainChar/orb/layer5.png",
-            modID + "Resources/images/char/mainChar/orb/layer6.png",
-            modID + "Resources/images/char/mainChar/orb/layer1d.png",
-            modID + "Resources/images/char/mainChar/orb/layer2d.png",
-            modID + "Resources/images/char/mainChar/orb/layer3d.png",
-            modID + "Resources/images/char/mainChar/orb/layer4d.png",
-            modID + "Resources/images/char/mainChar/orb/layer5d.png",};
-    static final String ID = makeID("TheComputerized"); //TODO: Change this
-    static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
+    private static final String[] orbTextures =
+        {modID + "Resources/images/char/mainChar/orb/layer1.png",
+         modID + "Resources/images/char/mainChar/orb/layer2.png",
+         modID + "Resources/images/char/mainChar/orb/layer3.png",
+         modID + "Resources/images/char/mainChar/orb/layer4.png",
+         modID + "Resources/images/char/mainChar/orb/layer5.png",
+         modID + "Resources/images/char/mainChar/orb/layer6.png",
+         modID + "Resources/images/char/mainChar/orb/layer1d.png",
+         modID + "Resources/images/char/mainChar/orb/layer2d.png",
+         modID + "Resources/images/char/mainChar/orb/layer3d.png",
+         modID + "Resources/images/char/mainChar/orb/layer4d.png",
+         modID + "Resources/images/char/mainChar/orb/layer5d.png",};
+    static final String ID = makeID("TheComputerized");
+    static final CharacterStrings characterStrings =
+        CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
 
-
     public TheComputerized(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, modID + "Resources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
-                modID + "Resources/images/char/mainChar/static.scml"));
-        initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
-                getLoadout(), 20.0F, -10.0F, 166.0F, 327.0F, new EnergyManager(3));
-
+        super(name, setClass, new CustomEnergyOrb(orbTextures, modID +
+                                                               "Resources/images/char/mainChar/orb/vfx.png",
+                                                  null), new SpriterAnimation(
+            modID + "Resources/images/char/mainChar/static.scml"));
+        initializeClass(null, SHOULDER1, SHOULDER2, CORPSE, getLoadout(), 20.0F,
+                        -10.0F, 166.0F, 327.0F, new EnergyManager(3));
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
@@ -62,9 +60,9 @@ public class TheComputerized extends CustomPlayer {
 
     @Override
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAMES[0], TEXT[0],
-                80, 80, 0, 99, 5, this, getStartingRelics(),
-                getStartingDeck(), false);
+        return new CharSelectInfo(NAMES[0], TEXT[0], 80, 80, 0, 99, 5, this,
+                                  getStartingRelics(), getStartingDeck(),
+                                  false);
     }
 
     @Override
@@ -88,8 +86,8 @@ public class TheComputerized extends CustomPlayer {
     @Override
     public void doCharSelectScreenSelectEffect() {
         CardCrawlGame.sound.playA("UNLOCK_PING", MathUtils.random(-0.2F, 0.2F));
-        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
-                false);
+        CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW,
+                                        ScreenShake.ShakeDur.SHORT, false);
     }
 
     @Override
@@ -104,7 +102,7 @@ public class TheComputerized extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return TODO_COLOR;
+        return COMPUTERIZED_COLOR;
     }
 
     @Override
@@ -124,8 +122,7 @@ public class TheComputerized extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        System.out.println("YOU NEED TO SET getStartCardForEvent() in your " + getClass().getSimpleName() + " file!");
-        return null;
+        return new LaserBlaster();
     }
 
     @Override
@@ -151,9 +148,9 @@ public class TheComputerized extends CustomPlayer {
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
         return new AbstractGameAction.AttackEffect[]{
-                AbstractGameAction.AttackEffect.FIRE,
-                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
-                AbstractGameAction.AttackEffect.FIRE};
+            AbstractGameAction.AttackEffect.FIRE,
+            AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+            AbstractGameAction.AttackEffect.FIRE};
     }
 
     @Override
@@ -167,13 +164,15 @@ public class TheComputerized extends CustomPlayer {
     }
 
     public static class Enums {
-        //TODO: Change these.
+
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_TODO;
-        @SpireEnum(name = "TODO_COLOR")
-        public static AbstractCard.CardColor TODO_COLOR;
-        @SpireEnum(name = "TODO_COLOR")
+        public static AbstractPlayer.PlayerClass THE_COMPUTERIZED;
+
+        @SpireEnum(name = "COMPUTERIZED_COLOR")
+        public static AbstractCard.CardColor COMPUTERIZED_COLOR;
+
+        @SpireEnum(name = "COMPUTERIZED_COLOR")
         @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_COLOR;
+        public static CardLibrary.LibraryType COMPUTERIZED_LIBRARY_COLOR;
     }
 }

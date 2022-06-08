@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theComputerized.actions.ModalChoiceAction;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 import theComputerized.cards.abstracts.ModalChoiceCard;
 
 import java.util.ArrayList;

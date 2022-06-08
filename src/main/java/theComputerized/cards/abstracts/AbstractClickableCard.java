@@ -3,6 +3,7 @@ package theComputerized.cards.abstracts;
 import com.evacipated.cardcrawl.mod.stslib.patches.HitboxRightClick;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theComputerized.cards.AbstractCustomCard;
 
 import static theComputerized.util.Wiz.adp;
 

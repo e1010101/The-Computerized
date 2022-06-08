@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,9 +34,7 @@ public class SelectCardsPlusCardMods extends AbstractCustomCard {
             CardModifierManager.addModifier(eligibleCardsList.get(i), new ExhaustMod());
             myCardsList.add(eligibleCardsList.get(i));
         }
-        atb(new SelectCardsAction(myCardsList, 1, "Choose a card to add into your hand with Ethereal and Exhaust.", (cards) -> {
-            att(new MakeTempCardInHandAction(cards.get(0), 1, true));
-        }));
+        atb(new SelectCardsAction(myCardsList, 1, "Choose a card to add into your hand with Ethereal and Exhaust.", (cards) -> att(new MakeTempCardInHandAction(cards.get(0), 1, true))));
     }
 
     public void upp() {

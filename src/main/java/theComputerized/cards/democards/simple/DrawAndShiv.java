@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 
 import static theComputerized.Main.makeID;
 import static theComputerized.util.Wiz.*;

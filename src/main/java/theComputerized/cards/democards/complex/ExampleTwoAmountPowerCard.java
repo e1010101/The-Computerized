@@ -2,7 +2,7 @@ package theComputerized.cards.democards.complex;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 import theComputerized.powers.TwoAmountPower;
 
 import static theComputerized.Main.makeID;

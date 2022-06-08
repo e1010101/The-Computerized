@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.optionCards.LiveForever;
 import com.megacrit.cardcrawl.cards.tempCards.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -2,7 +2,7 @@ package theComputerized.cards.cardvars;
 
 import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 
 import static theComputerized.Main.makeID;
 

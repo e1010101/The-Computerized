@@ -3,7 +3,7 @@ package theComputerized.cards.democards.complex;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.NirvanaPower;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 
 import static theComputerized.Main.makeID;
 import static theComputerized.util.Wiz.applyToSelfTemp;

@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 import theComputerized.cards.cardvars.SecondDamage;
 import theComputerized.cards.cardvars.SecondMagicNumber;
 import theComputerized.relics.AbstractEasyRelic;
@@ -71,7 +71,8 @@ public class Main implements
     public Main() {
         BaseMod.subscribe(this);
 
-        BaseMod.addColor(TheComputerized.Enums.TODO_COLOR, characterColor, characterColor, characterColor,
+        BaseMod.addColor(TheComputerized.Enums.COMPUTERIZED_COLOR, characterColor,
+                         characterColor, characterColor,
                          characterColor, characterColor, characterColor, characterColor,
                          ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                          ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -104,8 +105,8 @@ public class Main implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new TheComputerized(TheComputerized.characterStrings.NAMES[1], TheComputerized.Enums.THE_TODO),
-                             CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheComputerized.Enums.THE_TODO);
+        BaseMod.addCharacter(new TheComputerized(TheComputerized.characterStrings.NAMES[1], TheComputerized.Enums.THE_COMPUTERIZED),
+                             CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheComputerized.Enums.THE_COMPUTERIZED);
     }
 
     @Override

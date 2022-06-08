@@ -1,4 +1,4 @@
-package theComputerized.cards.abstracts;
+package theComputerized.cards;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
@@ -53,7 +53,7 @@ public abstract class AbstractCustomCard extends CustomCard {
                               final CardType type, final CardRarity rarity,
                               final CardTarget target) {
         this(cardID, cost, type, rarity, target,
-             TheComputerized.Enums.TODO_COLOR);
+             TheComputerized.Enums.COMPUTERIZED_COLOR);
     }
 
     public AbstractCustomCard(final String cardID, final int cost,

@@ -3,7 +3,6 @@ package theComputerized.cards;
 import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theComputerized.cards.abstracts.AbstractCustomCard;
 import theComputerized.cards.abstracts.AbstractSwappableCard;
 
 import java.util.Collections;
@@ -24,6 +23,10 @@ public class DeployPlating extends AbstractSwappableCard {
                         "Right Click to swap the effect of this card.");
     private static final List<TooltipInfo> tooltips =
         Collections.singletonList(toolTipInfo);
+
+    public DeployPlating() {
+        this(null);
+    }
 
     public DeployPlating(AbstractSwappableCard linkedCard) {
         super(ID, COST, TYPE, RARITY, TARGET);

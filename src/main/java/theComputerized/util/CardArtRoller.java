@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -73,9 +73,9 @@ public class CardArtRoller {
                     "     tgt.a), 0.0, 1.0);\n" + // keep alpha, then clamp
                     "}";
 
-    private static HashMap<String, TextureAtlas.AtlasRegion> doneCards = new HashMap<>();
+    private static final HashMap<String, TextureAtlas.AtlasRegion> doneCards = new HashMap<>();
     public static HashMap<String, ReskinInfo> infos = new HashMap<String, ReskinInfo>();
-    private static ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
+    private static final ShaderProgram shade = new ShaderProgram(vertexShaderHSLC, fragmentShaderHSLC);
 
     public static void computeCard(AbstractCustomCard c) {
         c.portrait = doneCards.computeIfAbsent(c.cardID, key -> {

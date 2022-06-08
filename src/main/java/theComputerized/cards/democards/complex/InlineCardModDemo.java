@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.Spiker;
 import theComputerized.cardmods.LambdaMod;
-import theComputerized.cards.abstracts.AbstractCustomCard;
+import theComputerized.cards.AbstractCustomCard;
 
 import static theComputerized.Main.makeID;
 import static theComputerized.util.Wiz.makeInHand;

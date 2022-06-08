@@ -5,6 +5,7 @@ import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theComputerized.cards.abstracts.AbstractSwappableCard;
+import theComputerized.cards.interfaces.UniqueCard;
 
 import java.util.Collections;
 import java.util.List;
@@ -13,9 +14,9 @@ import static com.brashmonkey.spriter.Spriter.draw;
 import static theComputerized.Main.makeID;
 import static theComputerized.util.Wiz.drawCards;
 
-@AutoAdd.Ignore
-public class Recalibrate extends AbstractSwappableCard {
-    public final static String ID = makeID("DeployPlating");
+
+public class Recalibrate extends AbstractSwappableCard implements UniqueCard {
+    public final static String ID = makeID("Recalibrate");
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.NONE;
@@ -27,9 +28,14 @@ public class Recalibrate extends AbstractSwappableCard {
     private static final List<TooltipInfo> tooltips =
         Collections.singletonList(toolTipInfo);
 
+    public Recalibrate() {
+        this(null);
+    }
+
+
     public Recalibrate(AbstractSwappableCard linkedCard) {
         super(ID, COST, TYPE, RARITY, TARGET);
-        magicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
         customTooltips = tooltips;
         if (linkedCard == null) {
             setLinkedCard(new DeployPlating(this));

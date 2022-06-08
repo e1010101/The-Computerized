@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import theComputerized.Main.SpecialCardTags;
-import theComputerized.cards.abstracts.AbstractCustomCard;
 
 import java.util.Collections;
 import java.util.List;
@@ -45,7 +44,7 @@ public class LaserBlaster extends AbstractCustomCard {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
 
         // MILITARY EFFECT
-        AbstractCard tmp = p.drawPile.getTopCard();
+        AbstractCard tmp = p.drawPile.getTopCard().makeStatEquivalentCopy();
         vfx(new ShowCardBrieflyEffect(tmp));
         if (tmp.type == CardType.ATTACK) {
             dmg(getRandomMonster(), AbstractGameAction.AttackEffect.FIRE);
