@@ -76,5 +76,9 @@
   "${ModID}:PocketMissiles": {
     "NAME": "Pocket Missiles",
     "DESCRIPTION": "[#176e10]Spare[] [#176e10]Part[]. NL At the start of your turn, deal !M! damage to a random enemy."
+  },
+  "${ModID}:ReinforcedArmor": {
+    "NAME": "Reinforced Armor",
+    "DESCRIPTION": "[#176e10]Spare[] [#176e10]Part[]. NL Gain !M! *Energy *Shield."
   }
 }

@@ -16,5 +16,11 @@
       " random enemy.",
       " random enemies."
     ]
+  },
+  "${ModID}:EnergyShield": {
+    "NAME": "Energy Shield",
+    "DESCRIPTIONS": [
+      "Reduce ALL damage by 75%, then reduce this by that amount."
+    ]
   }
 }
