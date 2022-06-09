@@ -1,14 +1,17 @@
-package theComputerized.cards;
+package theComputerized.cards.tokens;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theComputerized.cards.AbstractCustomCard;
 
 import java.util.ArrayList;
 
 import static theComputerized.Main.makeID;
 import static theComputerized.util.Wiz.*;
 
+@AutoAdd.Ignore
 public class IntelligenceProject extends AbstractCustomCard {
 
     public final static String ID = makeID("IntelligenceProject");

@@ -16,7 +16,9 @@ public class ModalChoiceCard extends AbstractCustomCard {
     private final String passedDesc;
 
     public ModalChoiceCard(String name, String description, Runnable onUseOrChosen) {
-        super(makeID(name), -2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE, CardColor.COLORLESS);
+        super(makeID(name.replaceAll(" ", "")), -2, CardType.SKILL,
+              CardRarity.SPECIAL,
+              CardTarget.NONE, CardColor.COLORLESS);
         this.name = this.originalName = passedName = name;
         this.rawDescription = passedDesc = description;
         this.onUseOrChosen = onUseOrChosen;

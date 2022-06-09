@@ -43,7 +43,7 @@
   },
   "${ModID}:EasyModalChoiceDemo": {
     "NAME": "Easy Modal Choice",
-    "DESCRIPTION": "Choose one: Draw !M! cards or gain !${ModID}:m2! Strength."
+    "DESCRIPTION": "Choose one: Draw !M! cards or gain !${ModID}:m2! #rStrength."
   },
   "${ModID}:DrawAndShiv": {
     "NAME": "Draw and Shiv",
@@ -51,8 +51,11 @@
   },
   "${ModID}:TwoTypesOfDamage": {
     "NAME": "Two Types of Damage",
-    "DESCRIPTION": "Deal !D! damage. NL If you're Vulnerable, deal !${ModID}:sd! damage instead."
+    "DESCRIPTION": "Deal !D! damage. NL If you're #rVulnerable, deal !${ModID}:sd! damage instead."
   },
+
+
+
   "${ModID}:LaserBlaster": {
     "NAME": "Laser Blaster",
     "DESCRIPTION": "[#005c0f]Military[] [#005c0f]Might[]. NL Deal !D! damage."
@@ -80,5 +83,13 @@
   "${ModID}:ReinforcedArmor": {
     "NAME": "Reinforced Armor",
     "DESCRIPTION": "[#176e10]Spare[] [#176e10]Part[]. NL Gain !M! *Energy *Shield."
+  },
+  "${ModID}:UnderworldInformant": {
+    "NAME": "Underworld Informant",
+    "DESCRIPTION": "[#112485]Government[] [#112485]Grant[]. NL Choose one: NL *Accept *Proposal || *Reject *Proposal"
+  },
+  "${ModID}:IntelligenceProject": {
+    "NAME": "Intelligence Project",
+    "DESCRIPTION": "Draw !M! cards. NL For each *Skill drawn this way, reduce the cost of a random *Attack in your hand by !${ModID}:m2!."
   }
 }

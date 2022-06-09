@@ -25,7 +25,7 @@ public class LaserBlaster extends AbstractCustomCard {
     private static final int DAMAGE = 6;
     private static final int UPGRADE_DAMAGE = 3;
     private static final TooltipInfo toolTipInfo =
-        new TooltipInfo("[#005c0f]Military[] [#005c0f]Might[]",
+        new TooltipInfo("[#005c0f]Military [#005c0f]Might",
                         "Look at the top card of your draw pile. If it is an " +
                         "attack, deal this card's damage to a random enemy.");
     private static final List<TooltipInfo> tooltips =

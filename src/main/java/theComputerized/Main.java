@@ -71,6 +71,9 @@ public class Main implements
 
         @SpireEnum(name = "FUNCTION")
         public static AbstractCard.CardTags FUNCTION;
+
+        @SpireEnum(name = "GOVERNMENT_GRANT")
+        public static AbstractCard.CardTags GOVERNMENT_GRANT;
     }
 
     public Main() {
