@@ -1,5 +1,5 @@
 # The-Computerized
-Adds The Computerized as a playable character to Slay The Spire.
+Adds The Computerized to Slay The Spire as a playable character.
 
 Main mechanics:
 "Spare Parts": Simple tokens that the Computerized generates at the start of every turn. They provide simple but permanent stat boosts.
